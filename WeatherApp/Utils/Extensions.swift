@@ -1,9 +1,5 @@
-//
-//  Extensions.swift
-//  WeatherApp
-//
-//  Created by Тимофей Кубышин on 2023-04-18.
-//
+
+//  Created by Timofey Hammer on 2023-04-18.
 
 import SwiftUI
 
@@ -19,4 +15,13 @@ extension Color {
     static let tabBarBorder = Color("Tab Bar Border").opacity(0.5)
     static let forecastCardBackground = Color("Forecast Card Background")
     static let probabilityText = Color("Probability Text")
+}
+
+extension View {
+    func backgroundBlur(radius: CGFloat = 3, opaque: Bool = false) -> some View {
+        self
+            .background(
+                Blur(radius: radius, opaque: opaque)
+            )
+    }
 }

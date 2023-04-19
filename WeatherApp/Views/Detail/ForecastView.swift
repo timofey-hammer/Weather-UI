@@ -1,9 +1,5 @@
-//
-//  ForecastView.swift
-//  WeatherApp
-//
-//  Created by Тимофей Кубышин on 2023-04-19.
-//
+
+//  Created by Timofey Hammer on 2023-04-18.
 
 import SwiftUI
 
@@ -12,6 +8,7 @@ struct ForecastView: View {
         ScrollView {
             
         }
+        .backgroundBlur(radius: 25, opaque: true)
         .background(Color.bottomSheetBackground)
         .clipShape(RoundedRectangle(cornerRadius: 44))
         .overlay {

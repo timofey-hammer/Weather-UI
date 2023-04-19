@@ -1,9 +1,5 @@
-//
-//  HomeView.swift
-//  WeatherApp
-//
-//  Created by Тимофей Кубышин on 2023-04-18.
-//
+
+//  Created by Timofey Hammer on 2023-04-18.
 
 import SwiftUI
 import BottomSheet
@@ -20,7 +16,7 @@ struct HomeView: View {
         NavigationView {
             ZStack {
                 
-                // MARK: Backgorund Color
+                // MARK: Background Color
                 
                 Color.background
                     .ignoresSafeArea()
@@ -34,8 +30,10 @@ struct HomeView: View {
                 // MARK: House Image
                 
                 Image("House")
-                    .frame(maxWidth: .infinity, alignment: .top)
+                    .frame(maxHeight: .infinity, alignment: .top)
                     .padding(.top, 257)
+                
+                // MARK: Current Weather
                 
                 VStack(spacing: -10) {
                     Text("Montreal")
@@ -44,8 +42,8 @@ struct HomeView: View {
                     VStack {
                         Text(attributedString)
                         
-                        Text("H:24˚   L:18˚")
-                            .font(.title2.weight(.semibold))
+                        Text("H:24°   L:18°")
+                            .font(.title3.weight(.semibold))
                     }
                     
                     Spacer()
@@ -55,25 +53,25 @@ struct HomeView: View {
                 // MARK: Bottom Sheet
                 
                 BottomSheetView(position: $bottomSheetPosition) {
-                    //Text(bottomSheetPosition.rawValue.formatted())
+
                 } content: {
-                     ForecastView()
+                    ForecastView()
                 }
-                
+
                 // MARK: Tab Bar
                 
                 TabBar(action: {
                     bottomSheetPosition = .top
                 })
             }
-            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
         }
     }
     
     private var attributedString: AttributedString {
-        var string = AttributedString("19˚" + "\n " + "Mostly Clear")
+        var string = AttributedString("19°" + "\n " + "Mostly Clear")
         
-        if let temp = string.range(of: "19˚") {
+        if let temp = string.range(of: "19°") {
             string[temp].font = .system(size: 96, weight: .thin)
             string[temp].foregroundColor = .primary
         }

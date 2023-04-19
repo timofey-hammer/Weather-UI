@@ -1,14 +1,9 @@
-//
-//  Shapes.swift
-//  WeatherApp
-//
-//  Created by Тимофей Кубышин on 2023-04-19.
-//
+
+//  Created by Timofey Hammer on 2023-04-18.
 
 import SwiftUI
 
 struct Arc: Shape {
-    
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
@@ -41,6 +36,7 @@ struct Trapezoid: Shape {
         path.addCurve(to: CGPoint(x: 0, y: 0.74857*height), control1: CGPoint(x: 0, y: 0.92636*height), control2: CGPoint(x: 0, y: 0.8671*height))
         path.addLine(to: CGPoint(x: 0, y: 0.37965*height))
         path.closeSubpath()
+        
         return path
     }
 }

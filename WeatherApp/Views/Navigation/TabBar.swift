@@ -1,9 +1,5 @@
-//
-//  TabBar.swift
-//  WeatherApp
-//
-//  Created by Тимофей Кубышин on 2023-04-18.
-//
+
+//  Created by Timofey Hammer on 2023-04-18.
 
 import SwiftUI
 
@@ -13,12 +9,15 @@ struct TabBar: View {
     var body: some View {
         ZStack {
             
-            //MARK: Arc Shape
+            // MARK: Arc Shape
             
             Arc()
                 .fill(Color.tabBarBackground)
                 .frame(height: 88)
                 .overlay {
+                    
+                    // MARK: Arc Border
+                    
                     Arc()
                         .stroke(Color.tabBarBorder, lineWidth: 0.5)
                 }
@@ -35,6 +34,7 @@ struct TabBar: View {
                     Image(systemName: "mappin.and.ellipse")
                         .frame(width: 44, height: 44)
                 }
+                
                 Spacer()
                 
                 // MARK: Navigation Button

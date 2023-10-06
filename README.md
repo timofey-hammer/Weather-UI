@@ -29,4 +29,4 @@ Build a weather app with scroll and text animations from a fully custom design u
 <img src="https://github.com/hammersoul/UI-WeatherApp-on-SwiftUI/raw/main/Images-App/Weather-Cards.png" width="400">
 
 <h2>Search Weather</h2>
-<img src="https://github.com/hammersoul/UI-WeatherApp-on-SwiftUI/raw/main/Images-App/Search-Weatcher.png" width="400">
+<img src="https://github.com/hammersoul/UI-WeatherApp-on-SwiftUI/raw/main/Images-App/Search-Weather.png" width="400">

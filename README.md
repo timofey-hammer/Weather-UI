@@ -30,3 +30,4 @@ Create a weather app with scrolling and text animations based on a completely cu
 
 <h2>Search Weather</h2>
 <img src="https://github.com/hammersoul/UI-WeatherApp-on-SwiftUI/raw/main/App-Images/Search-Weather.png" width="400">
+
